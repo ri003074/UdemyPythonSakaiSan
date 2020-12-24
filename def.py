@@ -78,6 +78,24 @@ say_something('Hi','Mike','Nancy')
 
 
 
+def menu2(**kwargs):
+    print(kwargs)
+    for k, v in kwargs.items():
+        print(k, v)
+            
+menu2(entree='beef', drink='coffee')
+
+
+
+
+
+d = { 
+    'entree':'beef', 
+    'drink':'coffee',
+    'dessert':'ice',
+}
+
+menu2(**d)
 
 
 
@@ -85,21 +103,13 @@ say_something('Hi','Mike','Nancy')
 
 
 
+def menu3(food, *args, **kwargs):
+    print(food)
+    print(args)
+    print(kwargs)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+menu3('banana','apple', 'orange', entree='beef', drink='coffee')
 
 
 
